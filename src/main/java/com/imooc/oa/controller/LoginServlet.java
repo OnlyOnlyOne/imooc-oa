@@ -34,7 +34,11 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         Map<String, Object> result = new HashMap<>();
         try {
+            //调用业务逻辑
             User user = userServlet.checkLogin(username, password);
+            HttpSession session = request.getSession();
+            //向session存入用户登录信息，属性名：login_user
+            session.setAttribute("login_user", user);
             result.put("code", "0");
             result.put("message","success");
             result.put("redirect_url", "/index");
