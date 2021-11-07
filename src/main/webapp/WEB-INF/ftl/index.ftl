@@ -22,11 +22,11 @@
                     <span class="layui-icon layui-icon-user" style="font-size: 20px">
                     </span>
                     <!--用户信息-->
-                    姓名[部门-职务]
+                    ${current_employee.name}[${current_department.departmentName}-${current_employee.title}]
                 </a>
             </li>
             <!--注销按钮-->
-            <li class="layui-nav-item"><a href="#">注销</a></li>
+            <li class="layui-nav-item"><a href="/Logout">注销</a></li>
         </ul>
     </div>
     <!--左侧菜单栏-->
