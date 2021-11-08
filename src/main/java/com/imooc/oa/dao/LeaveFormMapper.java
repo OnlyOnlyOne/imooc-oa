@@ -1,6 +1,10 @@
 package com.imooc.oa.dao;
 
 import com.imooc.oa.entity.LeaveForm;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+import java.util.Map;
 
 public interface LeaveFormMapper {
     int deleteByPrimaryKey(Long formId);
@@ -14,4 +18,7 @@ public interface LeaveFormMapper {
     int updateByPrimaryKeySelective(LeaveForm record);
 
     int updateByPrimaryKey(LeaveForm record);
+
+    List<Map> selectByParams(@Param("pf_state") String pfState , @Param("pf_operator_id") Long operator);
+
 }

@@ -16,5 +16,16 @@
         </sourceRoots>
       </configuration>
     </facet>
+    <facet type="web" name="Web2">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/out/artifacts/imooc_oa_Web_exploded/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/out/artifacts/imooc_oa_Web_exploded" relative="/" />
+        </webroots>
+        <sourceRoots />
+      </configuration>
+    </facet>
   </component>
 </module>

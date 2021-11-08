@@ -128,4 +128,16 @@
       `state` = #{state,jdbcType=VARCHAR}
     where form_id = #{formId,jdbcType=BIGINT}
   </update>
+  <select id="selectByParams" parameterType="java.util.Map" resultType="java.util.Map">
+    select f.*,e.name , d.*
+    from
+            adm_leave_form f,adm_process_flow pf,
+            adm_employee e , adm_department d
+    where
+            f.form_id = pf.form_id
+      and pf.state = #{pf_state}
+      and pf.operator_id = #{pf_operator_id}
+      and f.employee_id = e.employee_id
+      and e.employee_id = d.department_id
+  </select>
 </mapper>

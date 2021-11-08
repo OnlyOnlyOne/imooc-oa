@@ -164,4 +164,10 @@
       is_last = #{isLast,jdbcType=INTEGER}
     where process_id = #{processId,jdbcType=BIGINT}
   </update>
+
+
+
+  <select id="selectByFormId" parameterType="Long" resultType="com.imooc.oa.entity.ProcessFlow">
+    select * from adm_process_flow where form_id = #{value} order by order_no
+  </select>
 </mapper>

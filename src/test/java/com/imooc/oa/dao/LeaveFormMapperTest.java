@@ -8,6 +8,8 @@ import org.junit.Test;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 public class LeaveFormMapperTest extends TestCase {
     @Test
@@ -35,4 +37,15 @@ public class LeaveFormMapperTest extends TestCase {
             return null;
         });
     }
+
+    @Test
+    public void testSelectByParams() {
+        MybatisUtils.executeQuery(sqlSession -> {
+            LeaveFormMapper dao = sqlSession.getMapper(LeaveFormMapper.class);
+            List<Map> list = dao.selectByParams("process", 1l);
+            System.out.println(list);
+            return list;
+        });
+    }
+
 }

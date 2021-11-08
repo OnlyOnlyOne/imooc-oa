@@ -13,4 +13,15 @@ public class Notice {
     private String content;
 
     private Date createTime;
+
+
+
+    public Notice(){
+    }
+
+    public Notice(Long receiverId, String content) {
+        this.receiverId = receiverId;
+        this.content = content;
+        this.createTime = new Date();
+    }
 }

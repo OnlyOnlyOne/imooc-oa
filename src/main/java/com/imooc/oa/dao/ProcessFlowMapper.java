@@ -2,6 +2,8 @@ package com.imooc.oa.dao;
 
 import com.imooc.oa.entity.ProcessFlow;
 
+import java.util.List;
+
 public interface ProcessFlowMapper {
     int deleteByPrimaryKey(Long processId);
 
@@ -14,4 +16,6 @@ public interface ProcessFlowMapper {
     int updateByPrimaryKeySelective(ProcessFlow record);
 
     int updateByPrimaryKey(ProcessFlow record);
+
+    List<ProcessFlow> selectByFormId(Long formId);
 }
