@@ -2,7 +2,6 @@ package com.imooc.oa.dao;
 
 import com.imooc.oa.entity.User;
 import com.imooc.oa.utils.MybatisUtils;
-import org.apache.ibatis.jdbc.SQL;
 
 public class UserDao {
     /**

@@ -138,6 +138,6 @@
       and pf.state = #{pf_state}
       and pf.operator_id = #{pf_operator_id}
       and f.employee_id = e.employee_id
-      and e.employee_id = d.department_id
+      and e.department_id = d.department_id
   </select>
 </mapper>
